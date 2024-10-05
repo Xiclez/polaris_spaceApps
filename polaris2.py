@@ -34,7 +34,6 @@ PREDEFINED_IMAGES = [
 
 cancel_processing = False  # Indicador para cancelar el procesamiento
 
-# (rest of your code remains unchanged)
 
 # Example of using the resource_path for audio and image files
 # ...
@@ -222,7 +221,7 @@ def cancel_audio_processing():
     print("Cancelando procesamiento de audio...")
     
 def open_flickr_album():
-    webbrowser.open("https://www.flickr.com/photos/nasawebbtelescope/albums/")
+    webbrowser.open("https://webbtelescope.org/images")
 
 root = Tk()
 root.title("Reconocimiento de Coordenadas Estelares")
