@@ -44,7 +44,7 @@
             padding: 10px;
             width: 100%;
             border: 2px solid #000;
-            border-radius: 5px;
+            border-radius: 50px;
         }
 
         input[type="submit"] {
@@ -52,7 +52,7 @@
             color: #fff;
             padding: 20px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
         }
 
@@ -87,33 +87,76 @@
             display: inline-block;
             width: 210px;
         }
+
+        .image-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .image-buttons .form-group {
+            flex: 1 1 150px; /* Minimum width for the buttons */
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>STAR COORDINATES AN AUDIO PROCESSOR</h1>
+        <h1>POLARIS</h1>
+        <h2>melody of the stars</h2>
         <div class="grid-container">
             <div class="form-container">
                 <form method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="form-label">Interval Between Stars (ms)</label>
-                        <input class="form-input" type="number" name="interval" placeholder="Enter interval" min="1" max="10000" required>
+                        <input class="form-input" type="number" name="interval" value="350" placeholder="Enter interval" min="1" max="10000" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Limit Stars</label>
-                        <input class="form-input" type="number" name="limit" placeholder="Enter limit" min="1" max="100" required>
+                        <input class="form-input" type="number" name="limit" value="50" placeholder="Enter limit" min="1" max="100" required>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Upload Star Image</label>
-                        <input class="form-input" type="file" name="starImage" required>
+                    <div class="form-group" style="display: flex; justify-content: center; gap: 10px;">
+                        <input type="submit" value="Process" style="padding: 20px 40px; font-size: 1.2em; background-color: rgb(8, 92, 15); color: white;">
+                        <input type="submit" value="Cancel" style="padding: 20px 40px; font-size: 1.2em; background-color: rgb(255, 0, 0); color: white;" onclick="window.location.reload();">
                     </div>
-                    <div class="form-group">
-                        <input type="submit" value="Process">
-                    </div>
+                    
                 </form>
             </div>
         </div>
         <h2>IMAGES</h2>
+        <div class="image-buttons" style="gap: 1px">
+            <div class="form-group">
+                <input type="submit" value="Image 1">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 2">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 3">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 4">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 5">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 6">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 7">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 8">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 9">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Image 10">
+            </div>
+        </div>
     </div>
 </body>
 </html>
