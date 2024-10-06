@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Coordinates - Audio Processor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"], input[type="file"] {
+            padding: 10px;
+            width: 100%;
+            border: 2px solid #000;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .image-container {
+            text-align: right;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        .form-label {
+            font-size: 1em;
+        }
+
+        .form-input {
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1em;
+            display: inline-block;
+            width: 210px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>STAR COORDINATES AN AUDIO PROCESSOR</h1>
+        <div class="grid-container">
+            <div class="form-container">
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="form-label">Interval Between Stars (ms)</label>
+                        <input class="form-input" type="number" name="interval" placeholder="Enter interval" min="1" max="10000" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Limit Stars</label>
+                        <input class="form-input" type="number" name="limit" placeholder="Enter limit" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Upload Star Image</label>
+                        <input class="form-input" type="file" name="starImage" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Process">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <h2>IMAGES</h2>
+    </div>
+</body>
+</html>
